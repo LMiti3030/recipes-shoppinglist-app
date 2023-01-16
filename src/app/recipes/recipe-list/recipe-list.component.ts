@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -15,5 +15,12 @@ export class RecipeListComponent {
     'This is simply another test', 
     'https://lobsterfrommaine.com/wp-content/uploads/fly-images/1352/20210517-Pasta-alla-Gricia-with-Lobster3002-v3-scaled-530x380-c.jpg')
   ];
+
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
+
+
+  onRecipeSelected(recipe : Recipe){
+    this.recipeWasSelected.emit(recipe);
+  }
 
 }
