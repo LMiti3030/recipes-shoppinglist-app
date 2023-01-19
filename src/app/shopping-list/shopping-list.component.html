@@ -1,15 +1,13 @@
 <div class="row">
     <div class="col-xs-10">
-        <app-shopping-edit
-        (ingredientAdded)="onIngredientAdded($event)"
-        ></app-shopping-edit>
+        <app-shopping-edit></app-shopping-edit>
         <hr>
-        <!-- clickable list items 
+        <!-- clickable list items
         items will be used as buttons and we do not need href="#" on a
         instead use style="cursor: pointer;" -->
         <ul class="list-group">
-            <a 
-            class="list-group-item" 
+            <a
+            class="list-group-item"
             style="cursor: pointer;"
             *ngFor="let ingredient of ingredients"
             >
